@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.top {
+	background-color: #15344c; 
+	margin-bottom: 1%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top:1%;
+	height: 10%; 
+	width: 97%;
+	top: 0%;
+	text-align:center; 
+	color:#efeff0;
+	border-color: #15344c;
+	border-style: solid; 
+	border-radius:5px;
+	border-width: 10px; 
+}
+ul {
+	list-style-type: none;
+}
+
+.menubar {
+	width: 93%;
+	text-align:center; 
+	margin-right: auto;
+	margin-left: auto;
+ 	padding:2%;
+	overflow: hidden; 
+	background-color:#c8d5e5;
+	border-color: #c8d5e5;
+	border-radius: 5px;
+	border-style: solid;  
+	border-width:10px;
+	font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+}
+
+.menubar a {
+	float: left;
+	padding-left:1%;
+	padding-right:1%;
+	padding-top:1%;
+	padding-bottom:1%;
+	text-decoration: none;
+	font-weight: bold;
+	font-family:Futura;
+	color: #000;
+	text-transform:uppercase;
+	font-size: 20px;
+}
+
+.menubar a:hover {
+	background-color: #fff;
+	border-radius:5px;
+}
+
+
+#content {
+	width: 100%;
+}
+
+.bottom {
+	text-align:center;
+	font-size: 15px;
+	font-family: Futura;
+	padding: 2%;
+	height: 6%; 
+	width: 93%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10%;
+	border-width: 10px;
+	color:#6e7c83;
+	border-radius: 5px;
+	border-style: solid; 
+	border-color:#c8d5e5;
+	background-color:#c8d5e5;
+	bottom: 0%;
+	
+}
+
+h1 { 
+	margin-top: 3%; 
+	font-size:130px;
+	font-family:Impact;
+}
+h2 { 
+	margin-top: -6%; 
+	font-size:40px;
+	text-transform:uppercase;
+	color: #c8d5e5;
+	font-family: Futura;
+}
+@media screen and (max-width: 1000px) {
+  .top {
+    font-size: 80px;
+	border-width: 6px; 
+  }
+  .menubar {
+	 border-width: 6px;
+  }
+  .bottom {
+	 font-size: 15px;
+  }
+}
