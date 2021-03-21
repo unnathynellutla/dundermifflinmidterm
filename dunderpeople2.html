@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Try It - Completed</title>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<style type="text/css">
+		#slides-wrapper{height:320px;}
+		
+		h1 { text-align: center }
+		  
+		.info { text-align: center }
+			
+		img {
+			 display: block;
+			 margin-left: auto;
+			 margin-right: auto;
+			}
+
+	</style>
+	<script language="javascript">
+	people = ["scott.jpg", "jim4.jpg","schrute3.jpg", "Angela.jpg", "kevin.jpg", "creed.jpg",
+	 "meredith.jpg", "oscar.jpg", "toby.jpg"];
+	var Index=0;
+	
+	//smaller kevin bigger jim
+	
+	$(document).ready(function() {
+		//alert("hi")
+		$("#startSlides").click(slideShow);
+		$("#stopSlides").click(function()
+			{
+				$("#slide img").stop().fadeIn();
+			}
+		);
+	})
+	function slideShow()
+	{
+		$("#slide img").fadeOut(1500,nextSlide);
+	}
+	function nextSlide()
+	{
+		Index++;
+		Index= Index== people.length?0: Index;
+		$("#slide img").attr("src", "peopleimages/"+people[Index]);
+		$("#slide img").fadeIn(1500,slideShow);
+	}
+	</script>
+</head>
+<body>
+	
+	<div class="info">
+
+	<h1>The People of Dunder Mifflin</h1>
+	<div id='slides-wrapper'>
+		<div id='slide'>
+			<img src="peopleimages/scott.jpg" />
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+
+	<input type= "button" id="startSlides" value="Start Slide Show">
+	<input type= "button" id="stopSlides" value="Stop Slide Show">
+
+	
+</div class="info">
+
+</body>
+</html>
