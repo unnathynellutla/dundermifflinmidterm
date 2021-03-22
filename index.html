@@ -3,8 +3,92 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
-<title>Dunder Mifflin</title>
+<title><h1>Dunder Mifflin</title>
 <link href="dundermifflinstyles.css" rel="stylesheet" type="text/css" />
+<style>
+	.reg-img {
+  	display: block;
+	margin-top: 2%;
+  	margin-left: auto;
+  	margin-right: auto;
+ 	width: 77%;
+	border-radius:20px;
+	}
+	#hometext {
+		margin-top: -16%;
+		margin-left:20%;
+		margin-right:20%;
+		margin-bottom:1%;
+		text-align: center;
+	  	font-family:Futura;
+		font-size:1.5vw;
+		color:#fff;
+	}
+	.panel-btn{
+	font-size:1.7vw;
+	border: 1px solid #c8d5e5;
+	border-radius: 10px;
+	display: inline-block;
+	text-decoration: none;
+	font-family:Futura;
+	padding: .7% .7%;
+	margin-left: 45%;
+  	margin-right: 43%; 
+	transition: all 200ms ease-in-out;
+	background-color: #15344c;
+	color: white;
+}
+.panel-btn:hover, .panel-btn:focus{ background-color: #c8d5e5;}
+.panel-table{
+		font-family: Futura;
+		box-sizing: border-box;
+		border-radius: 15px;
+		padding: 10px 20px;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		text-transform: capitalize;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		max-width: 1100px;
+		min-height: 100vh;
+	}
+	
+.panel-header{
+	letter-spacing: 1px;
+}
+
+.panel-points{
+	margin: 30px 0 25px; 
+	color: #15344c;
+	letter-spacing: 1px;
+	font-size: 15px;
+	line-height: 2;
+}
+
+.panel-header-items{
+	letter-spacing: 1px;
+	font-size: 15px;
+}
+
+.panel-img{
+	margin-bottom: 30px;
+	max-width: 100%;
+}
+@media only screen and (min-width: 900px){
+	.panel-table {
+		justify-content: center;
+		flex-direction: row;
+		margin: auto;
+	} 
+}
+	.panel{
+		margin-top:7%;
+		margin-right:3%;
+		margin-left:3%;
+}
+</style>
 </head>
 	
 <body>
@@ -15,20 +99,61 @@
 			<div class="menubar">
 
 				<ul>
-				<li><a href="index.html">Home</a></li>
+				<li><a href="dundermifflin.html">Home</a></li>
 				<li><a href="dundermifflinshop.html">Shop</a></li>
-				<li><a href="history_yilin.html">History</a></li>
+				<li><a href="dundermifflinhistory.html">History</a></li>
 				<li><a href="dundermifflincontact.html">Contact Us</a></li>
-				<li><a href="whydunder.html">Why Dunder Mifflin?</a></li>
-				<li><a href="dunderpeople2.html">Meet the People</a></li>
-				<li><a href="careers_yilin.html">Careers</a></li>
+				<li><a href="dundermifflinwhy.html">Why Dunder Mifflin?</a></li>
+				<li><a href="dundermifflinmeet.html">Meet the People</a></li>
+				<li><a href="dundermifflincareers.html">Careers</a></li>
 				</ul>
+				
 			</div>	
-		</div>		
-			
-			
-			
-<div class = "bottom">
+		</div>	
+		
+<div class="container">
+	<img src="dunderart5.png" alt="Dunder Mifflin Home" class = "reg-img" >
+	<div id = "hometext"><h2 style = "font-size: 2.5vw; margin-bottom:1%;">Limitless Paper in a Paperless World.</h2>
+	Dunder Mifflin is a paper company like no other. We treat our clients like family. Your business and paper needs come first. Join our family, and place an order with us today. </div>
+	
+</div>	
+<a a href="dundermifflinshop.html" class= "panel-btn">Order Now</a>
+<div class="panel-table">
+			<div class="panel">
+				<img src="paper.jpeg" alt="" class="panel-img" width="200" height="320" >
+				<h2 class="panel-header">Paper</h2>
+				<ul class="panel-points">
+					<li></li>
+					<li>We have been in the paper business for over 65 years, so we know everything there is to know about paper. Call Dunder Mifflin for the best price and the best customer service on paper supply in the Northeast. Let our business serve yours.</li>
+				</ul>
+				
+			</div>
+			<div class="panel">
+				<img src="printertwo.jpeg" alt="" class="panel-img" width="1700" height="320"style = "margin-top:-60px">
+				<h2 class="panel-header">Print</h2>
+				<ul class="panel-points">
+					<li>Dunder Mifflin carries high quality printers for every kind of business. Check out our new Dunder Mifflin Sabre printers for a more affordable option. </li>
+				</ul>
+			</div>
+				<div class="panel">
+					<img src="tablet.jpeg" alt="" class="panel-img" width="1700" height="320" style = "margin-top:-60px">
+					<h2 class="panel-header">Tablets</h2>
+					<ul class="panel-points">
+						<li>In a paperless age, Dunder Mifflin carries products for businesses who are limiting their paper needs as well. Our tablets are great for offices and personal use.</li>
+					</ul>
+			</div>
+			<div class="panel">
+					<img src="officesupplies.jpeg" alt="" class="panel-img" width="1700" height="320" style = "margin-top:0px">
+					<h2 class="panel-header">Office </h2>
+					<ul class="panel-points">
+						<li>Choose Dunder Mifflin as a one-stop-shop for all your office supplies. We pick the best office products so you don't have to. Quality comes first with Dunder Mifflin office supply service.</li>
+					</ul>
+			</div>
+			</div>
+				
+				
+		</div>
+<div class = "bottom" style = "margin-top: 5%;">
 		Scranton PA | New York NY | Akron Ohio | Albany NY | Nashua NY | Rochester NY | Utica NY | Syracuse NY |
 		<br /><br />Binghamton NY | Buffalo NY | Camden NJ | Pittsfield MA | Stamford CT | Yonkers NY | 
 
@@ -36,7 +161,8 @@
 		<br /> 
 	Dunder Mifflin Inc,
 		<br />
-	Since 1949
+	Since 1968
 	</div>	
+			
 </body>
 </html>
