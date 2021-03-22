@@ -2,15 +2,13 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>People of Dunder Mifflin</title>
-	<link href="dundermifflinstyles.css" rel="stylesheet" type="text/css" />
+<title>jQuery Try It - Completed</title>
+
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<style type="text/css">
 		#slides-wrapper{height:320px;}
 		
-		h1 { 
-		text-align: center;
-		}
+		h1 { text-align: center }
 		  
 		.info { text-align: center }
 			
@@ -19,27 +17,24 @@
 			 margin-left: auto;
 			 margin-right: auto;
 			}
+	
+		.panel-btn{
+			border: 1px solid #c8d5e5;
+			border-radius: 10px;
+			display: inline-block;
+			text-decoration: none;
+			padding: 15px 20px;
+			margin-left: 20px;
+			transition: all 200ms ease-in-out;
+			background-color: #15344c;
+			color: white;
+		}
+		
+		.panel-btn:hover, .panel-btn:focus{ background-color: #c8d5e5;}
+
+
 
 	</style>
-	<div class="top"><h1>Dunder Mifflin Inc,<h1><h2>Paper Company</h2></div>
-		
-		<div id="content">
-		
-			<div class="menubar">
-
-				<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="dundermifflinshop.html">Shop</a></li>
-				<li><a href="history_yilin.html">History</a></li>
-				<li><a href="dundermifflincontact.html">Contact Us</a></li>
-				<li><a href="whydunder.html">Why Dunder Mifflin?</a></li>
-				<li><a href="dunderpeople2.html">Meet the People</a></li>
-				<li><a href="careers_yilin.html">Careers</a></li>
-				</ul>
-				
-			</div>	
-		</div>	
-		
 	<script language="javascript">
 	people = ["scott.jpg", "jim4.jpg","schrute3.jpg", "Angela.jpg", "kevin.jpg", "creed.jpg",
 	 "meredith.jpg", "oscar.jpg", "toby.jpg"];
@@ -73,7 +68,6 @@
 	
 	<div class="info">
 
-	<h1 style = "font-size:50px;">The People of Dunder Mifflin</h1>
 	<div id='slides-wrapper'>
 		<div id='slide'>
 			<img src="peopleimages/scott.jpg" />
@@ -95,20 +89,11 @@
 	<br>
 
 
-	<input type= "button" id="startSlides" value="Start Slide Show">
-	<input type= "button" id="stopSlides" value="Stop Slide Show">
+	<input type= "button" id="startSlides" class="panel-btn" value="Start Slide Show">
+	<input type= "button" id="stopSlides" class="panel-btn" value="Stop Slide Show">
 
 	
 </div class="info">
-<div class = "bottom">
-		Scranton PA | New York NY | Akron Ohio | Albany NY | Nashua NY | Rochester NY | Utica NY | Syracuse NY |
-		<br /><br />Binghamton NY | Buffalo NY | Camden NJ | Pittsfield MA | Stamford CT | Yonkers NY | 
 
-	   	<br /> 
-		<br /> 
-	Dunder Mifflin Inc,
-		<br />
-	Since 1949
-	</div>	
 </body>
 </html>
