@@ -7,6 +7,89 @@
 	<link href="dundermifflinstyles.css" rel="stylesheet" type="text/css" />
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<style type="text/css">
+	
+	.panel-table{
+		font-family: Futura;
+		box-sizing: border-box;
+		border-radius: 15px;
+		padding: 10px 20px;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		text-transform: capitalize;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		max-width: 900px;
+		min-height: 100vh;
+	}
+	
+	#slides-wrapper{height:320px;}
+
+	
+.panel-header{
+	letter-spacing: 1px;
+}
+
+.panel-points{
+	margin: 30px 0 25px;
+	color: #15344c;
+	letter-spacing: 1px;
+	font-size: 15px;
+	line-height: 2;
+}
+
+.panel-header-items{
+	letter-spacing: 1px;
+	font-size: 15px;
+}
+
+.panel-img{
+	margin-bottom: 30px;
+	max-width: 100%;
+}
+
+.panel-btn{
+	border: 1px solid #c8d5e5;
+	border-radius: 10px;
+	display: inline-block;
+	text-decoration: none;
+	padding: 15px 20px;
+	margin-left: 20px;
+	transition: all 200ms ease-in-out;
+	background-color: #15344c;
+	color: white;
+}
+
+.panel-btn:hover, .panel-btn:focus{ background-color: #c8d5e5;}
+
+@media only screen and (min-width: 900px){
+	.panel-table {
+		justify-content: center;
+		flex-direction: row;
+		margin: auto;
+	} 
+}
+@media screen and (max-width: 1000px) {
+   h1{
+		font-size: 50px;
+	  }
+	 h2{
+		margin-top:0%;
+		font-size:20px;
+	  }
+
+	  .menubar {
+		 border-width: 6px;
+	  }
+	.menubar a {
+		font-size: 20px;
+	}
+	  .bottom {
+		 font-size: 15px;
+	  }
+}
+
 		@media screen and (max-width: 1000px) {
    h1{
 		font-size: 50px;
@@ -109,11 +192,14 @@
 	
 	<div class="info">
 
-	<div id='slides-wrapper'>
-		<div id='slide'>
-			<img src="peopleimages/scott.jpg" />
+		<div id='slides-wrapper'>
+			<div id='slide'>
+				<img src="peopleimages/scott.jpg" />
+			</div>
 		</div>
-	</div>
+		<br>
+		<br>
+
 	<br>
 	<br>
 	<br>
