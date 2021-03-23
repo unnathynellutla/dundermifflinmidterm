@@ -6,6 +6,26 @@
 <title>Dunder Mifflin</title>
 <link href="dundermifflinstyles.css" rel="stylesheet" type="text/css" />
 <style>
+	@media screen and (max-width: 1000px) {
+   h1{
+		font-size: 50px;
+	  }
+	 h2{
+		margin-top:0%;
+		font-size:20px;
+	  }
+
+	  .menubar {
+		 border-width: 6px;
+	  }
+	.menubar a {
+		font-size: 20px;
+	}
+	  .bottom {
+		 font-size: 15px;
+	  }
+}
+	
 	.reg-img {
   	display: block;
 	margin-top: 2%;
@@ -13,16 +33,17 @@
   	margin-right: auto;
  	width: 77%;
 	border-radius:20px;
-	}
+	}	
 	#hometext {
-		margin-top: -16%;
+		line-height: 2;
+		margin-top: -15%;
 		margin-left:20%;
 		margin-right:20%;
-		margin-bottom:1%;
+		margin-bottom:3%;
 		text-align: center;
 	  	font-family:Futura;
-		font-size:1.5vw;
-		color:#fff;
+		font-size:1.4vw;
+		color:#15344c;
 	}
 	.panel-btn{
 	font-size:1.7vw;
@@ -47,7 +68,6 @@
 		display: flex;
 		flex-direction: column;
 		text-align: center;
-		text-transform: capitalize;
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
@@ -71,7 +91,6 @@
 	letter-spacing: 1px;
 	font-size: 15px;
 }
-
 .panel-img{
 	margin-bottom: 30px;
 	max-width: 100%;
@@ -82,38 +101,41 @@
 		flex-direction: row;
 		margin: auto;
 	} 
-}
+} 
 	.panel{
 		margin-top:7%;
 		margin-right:3%;
 		margin-left:3%;
 }
+
+
 </style>
 </head>
 	
 <body>
-	<div class="top"><h1>Dunder Mifflin Inc,<h1><h2>Paper Company</h2></div>
+	<div class="top" ><a href="dundermifflin.html" style = "text-decoration:none; color:#fff"> <h1>Dunder Mifflin Inc,<h1></a><h2>Paper Company</h2></div>
 		
 		<div id="content">
 		
-				<div class="menubar">
+			<div class="menubar">
 
 				<ul>
-				<li><a href="index.html">Home</a></li>
+				<li><a href="dundermifflin.html">Home</a></li>
 				<li><a href="dundermifflinshop.html">Shop</a></li>
-				<li><a href="history_yilin.html">History</a></li>
-				<li><a href="dundercontact.html">Contact Us</a></li>
-				<li><a href="whydunder.html">Why Dunder Mifflin?</a></li>
-				<li><a href="dunderpeople2.html">Meet the People</a></li>
-				<li><a href="careers_yilin.html">Careers</a></li>
+				<li><a href="dundermifflinhistory.html">History</a></li>
+				<li><a href="dundermifflincontact.html">Contact Us</a></li>
+				<li><a href="dundermifflinwhy.html">Why Dunder Mifflin?</a></li>
+				<li><a href="dundermifflinmeet.html">Meet the People</a></li>
+				<li><a href="dundermifflincareers.html">Careers</a></li>
 				</ul>
 				
 			</div>	
+		</div>	
 		
 <div class="container">
 	<img src="dunderart5.png" alt="Dunder Mifflin Home" class = "reg-img" >
-	<div id = "hometext"><h2 style = "font-size: 2.5vw; margin-bottom:1%;">Limitless Paper in a Paperless World.</h2>
-	Dunder Mifflin is a paper company like no other. We treat our clients like family. Your business and paper needs come first. Join our family, and place an order with us today. </div>
+	<div id = "hometext"><h2 style = "font-size: 5vw; margin-bottom:15%;line-height:1;">Limitless Paper in a Paperless World.</h2>
+	Dunder Mifflin Paper Company is an office supply company like no other. Our specialty is quality and customer care. We treat our clients like family. At Dunder Mifflin, your business and paper needs come first because we put people above profit. Stop by one of our branches throughout the Northeast to get to know the Dunder Mifflin family, or place an order online. Join our family, and place an order with us today. </div>
 	
 </div>	
 <a a href="dundermifflinshop.html" class= "panel-btn">Order Now</a>
