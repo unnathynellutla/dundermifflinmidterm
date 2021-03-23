@@ -5,41 +5,349 @@
 <meta charset="UTF-8">
 <title>Dunder Mifflin Shop</title>
 <link href="dundermifflinstyles.css" rel="stylesheet" type="text/css">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<style>
+	/*body and main headers*/
+	#shop {
+		font-weight:bold;
+		color:#15344c;
+		font-family:futura;
+		font-size:50px;
+		text-align:center;
+		margin-top:3%;
+	}
+	.shop-subheader {
+		color:#c8d5e5;
+		font-family:futura;
+		font-size:30px;
+		text-align:center;
+		margin: 3%;
+	}
+	.shop-container {
+		max-width:850px;
+		margin:auto;
+	}
+	
+/*info about paper*/
+	#paper-text {
+		display:inline-block;
+		font-family:arial;
+		font-size:15px;
+		text-align:left;
+		line-height:40px;
+		width:50%;
+		margin-left:70%;
+		
+	}
+	#paper-header {
+		font-size:25px;
+		font-weight:100;
+	}
+	
+	#papers {
+		margin:0;
+		display:inline-block;
+	}
+	
+	
+/*product card*/
+	.shop-images {
+		height:120px;
+		margin:10%;
+	}
+	.card {
+		max-width:200px;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		margin: 3px;
+		text-align: center;
+		font-family: arial;
+	}
+	
+	.text-container {
+		height:30px;
+		max-width:300px;
+		max-height:20px;
+	}
+	
+	.product-header {
+		max-width:300px;
+		font-size:15px;
+		margin:3%;
+	}
+	
+	.price {
+		color: grey;
+		font-size: 22px;
+	}
+	
+/*buttons*/
+	.card button {	
+		border: none;
+		outline: 0;
+		padding: 12px;
+		color: white;
+		background-color: #000;
+		text-align: center;
+		cursor: pointer;
+		font-size:18px;
+		width:100%;
+		position:relative;
+	}
+	
+	.card button:hover {
+		opacity: 0.7;
+	}
+
+	#buttonwrap {
+		text-align:center;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	.viewCart {
+		border: 1px solid #c8d5e5;
+		border-radius: 10px;
+		display: inline-block;
+		text-decoration: none;
+		padding: 15px 20px;
+		margin-left: 20px;
+		transition: all 200ms ease-in-out;
+		background-color: #15344c;
+		color: white;
+		margin-left:auto;
+		margin-right:auto;
+		margin-top:10px;
+	}
+	.viewCart:hover {
+		background-color: #c8d5e5;
+		cursor:pointer;
+	}
+	
+/*swal*/
+	.swal-text {
+		font-family:arial;
+		background-color:white;
+		display:block;
+		color:grey;
+		text-align:center;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	.swal-title {
+		font-family:arial;
+		color:black;
+	}
+	
+	.swal-button {
+		background-color:black;
+		font-family:arial;
+		color:white;
+	}
+	
+/*Media*/
+	@media (max-width:2000px) {
+		.card {
+			width:200px;
+		}
+		.shop-container {
+			width:850px;
+		}
+	}
+	@media (max-width:1000px) {
+		.card {
+			width:100px;
+		}
+		.shop-container {
+			width: 400px;
+		}
+		.shop-images {
+			height: 70px;
+		}
+		.price {
+			font-size:15px;
+		}
+		.product-header {
+			font-size:10px;
+		}
+	}
+	
+	
+</style>
+	
+	
+	
 </head>
 
 <body>
-	<body>
-	<div class="top"><h1>Dunder Mifflin Inc,<h1><h2>Paper Company</h2>	</div>
+	
+	<!--header-->
+	<div class="top">
+		<h1>Dunder Mifflin Inc,</h1>
+		<h2>Paper Company</h2>	
+	</div>
 		
-		<div id="content">
+	<div id="content">
 		
-			<div class="menubar">
+		<div class="menubar">
 
-				<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="dundermifflinshop.html">Shop</a></li>
-				<li><a href="history_yilin.html">History</a></li>
-				<li><a href="dundercontact.html">Contact Us</a></li>
-				<li><a href="whydunder.html">Why Dunder Mifflin?</a></li>
-				<li><a href="dunderpeople2.html">Meet the People</a></li>
-				<li><a href="careers_yilin.html">Careers</a></li>
-				</ul>
+			<ul>
+			<li><a href="dundermifflin.html">Home</a></li>
+			<li><a href="dundermifflinshop.html">Shop</a></li>
+			<li><a href="dundermifflinhistory.html">History</a></li>
+			<li><a href="dundermifflincontact.html">Contact Us</a></li>
+			<li><a href="dundermifflinwhy.html">Why Dunder Mifflin?</a></li>
+			<li><a href="dundermifflinmeet.html">Meet the People</a></li>
+			<li><a href="dundermifflincareers.html">Careers</a></li>
+			</ul>
 				
-			</div>	
-		</div>		
+		</div>	
+	</div>
+
+	<!---products data--->
+	<script language = "javascript">
+		
+		function product(name,price,img,quan) {
+			this.name = name;
+			this.price = price;
+			this.img = img;
+			this.quan = quan;
+		}
+		
+		products = new Array(
+			new product("Single Ream",7.99,"shop-images/paper.jpg",0),
+			new product("8-Ream Carton",36.99,"shop-images/paper.jpg",0),
+			new product("Dunder Mifflin Blue Crewneck",19.99,"shop-images/crewneck-blue.jpg",0),
+			new product("Dunder Mifflin Gray Crewneck",19.99,"shop-images/crewneck-gray.jpg",0),
+			new product("Dunder Mifflin Hoodie",24.99,"shop-images/hoodie-blue.jpg",false),
+			new product("Dunder Mifflin Christmas Sweater",29.99,"shop-images/xmas-sweater.jpg",0),
+			new product("Dunder Mifflin Baseball Tee",19.99,"shop-images/baseball-tee.jpg",0),
+			new product("Dunder Mifflin Sweatpants",19.99,"shop-images/sweatpants.jpg",0),
+			new product("Dunder Mifflin Blue Mug",14.99,"shop-images/mug-blue.jpg",0),
+			new product("Dunder Mifflin White Mug",14.99,"shop-images/mug-white.jpg",0),
+			new product("Dunder Mifflin Notebook",14.99,"shop-images/notebook.jpg",0),
+			new product("Dunder Mifflin Baseball Hat",9.99,"shop-images/hat.jpg",0),
+			new product("Dunder Mifflin Beanie",9.99,"shop-images/beanie.jpg",0),
+			new product("Dunder Mifflin Pillow",19.99,"shop-images/pillow.jpg",0)
+		);
+	</script>
+
+	
+	<!---display shop items--->
+	<div id="shop">SHOP</div>
+	<div id="buttonwrap"><button class="viewCart" onclick="viewCart();">View Shopping Cart</button></div>
+	<br>
+	<hr style="width:850px">
+	<div class="shop-container">
+		
+		<!---paper products--->
+		<div class="shop-subheader">PAPER</div>
+		
+		<!---displays paper products--->
+		<table id="papers">
+			<script language="javascript">
+				s = "";
+				for (i=0;i<2;i++) {
+					s += "<td>";
+					s += "<div class='card'>";
+					s += "<img src= '" + products[i].img + "' alt'' class='shop-images'>";
+					s += "<div class='text-container'>"
+					s += "<div class='product-header'>" + products[i].name + "</div>" +"</div>"
+					s += "<p class='price'>$" + products[i].price + "</p>";
+					s += `<p><button name='addtocart' id='addtocart' onclick="addToCart(${i})">Add to Cart</button></p>`;
+					s += "</div>"+"</td>";
+				}
+				document.write(s);
+			</script>
+		</table>
+		
+		<!---merch products--->
+		<div class="shop-subheader">MERCH</div>
+		<table>
+			<!---displays merch products--->
+			<script language="javascript">
+				s = "";
+				for (i=2;i<products.length;i++) {
+					//make new row
+					if ((i-2)%4==0) {
+						s += "<tr>";
+					}
+					s += "<td>";
+					s += "<div class='card'>";
+					s += "<img src= '" + products[i].img + "' alt'' class='shop-images'>";
+					s += "<div class='text-container'>"
+					s += "<div class='product-header'>" + products[i].name + "</div>" +"</div>"
+					s += "<p class='price'>$" + products[i].price + "</p>";
+					s += `<p><button name='addtocart' id='addtocart' onclick="addToCart(${i})">Add to Cart</button></p>`;
+					s += "</div>"+"</td>";
+				}
+				document.write(s);
+			</script>
+		</table>
+	</div>
+	
+	<!---functions--->
+	<script language="javascript">
+				
+		/*adds item to cart when clicked on*/
+		function addToCart(index) {
+			products[index].quan++;
+			swal({
+				title:"Item added to cart",
+				text: products[index].name,
+				icon: "success",
+			});
+		}
 			
+		
+		
+		/*view shopping cart*/
+		function viewCart() {
+			var cart;
+			var subtotal = 0;
+			var str = "<table id='shoppingcart'><tr><th>Product</th><th>Quantity</th><th>Price</th></tr>";
+			for(i=0;i<products.length;i++) {
+				if (products[i].quan > 0) {
+					//name						
+					str += "<tr><td>" + products[i].name + "</td>"
+					//quantity
+					str += "<td style='text-align:center'>" + products[i].quan + "</td>"
+					//price
+					var price = (products[i].price)*(products[i].quan);
+					str += "<td>$" + price + "</td></tr>";
+					subtotal += price;
+				}
+			}
+			str += "</table><br>";
+			str += "<strong>Subtotal:</strong> $" + subtotal.toFixed(2);
+			str += "<br><br><button type='button' id = 'clear' onclick='window.close()'>Clear Cart</button>";
+			str += "&nbsp; &nbsp;";
+			str += `<button type='button' id = 'purchase' onclick='alert("Purchase Completed!");window.close();'>Purchase</button>`;
+			cart = window.open("","","width=500,height=300");
+			cart.document.write("<title>Shopping Cart</title>");
+			cart.document.write(str);
 			
-			
-<div class = "bottom">
+			cart.onunload=function(){
+				for(i=0;i<products.length;i++) {
+					products[i].quan = 0;
+				}
+			}
+		}
+		
+		
+
+	</script>
+	
+	
+<!--footer-->
+	<div class = "bottom">
 		Scranton PA | New York NY | Akron Ohio | Albany NY | Nashua NY | Rochester NY | Utica NY | Syracuse NY |
 		<br /><br />Binghamton NY | Buffalo NY | Camden NJ | Pittsfield MA | Stamford CT | Yonkers NY | 
 
 	   	<br /> 
 		<br /> 
-	Dunder Mifflin Inc,
+		Dunder Mifflin Inc,
 		<br />
-	Since 1949
+		Since 1968
 	</div>
-</body>
+	
 </body>
 </html>
