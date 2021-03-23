@@ -1,12 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Why Dunder Mifflin</title>
+<link href="dundermifflinstyles.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="app.css">
+<style type="text/css">
+	.panel-table{
+		font-family: Futura;
+		box-sizing: border-box;
+		border-radius: 15px;
+		padding: 10px 20px;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		text-transform: capitalize;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		max-width: 900px;
+		min-height: 100vh;
+	}
+	
+.panel-header{
+	letter-spacing: 1px;
+}
 
-   <head>
-      <title>Why Dunder Mifflin</title>
-	<link href="dundermifflinstyles.css" rel="stylesheet" type="text/css" />
-      
-      <style>      
-	   @media screen and (max-width: 1000px) {
+.panel-points{
+	margin: 30px 0 25px;
+	color: #15344c;
+	letter-spacing: 1px;
+	font-size: 15px;
+	line-height: 2;
+}
+
+.panel-header-items{
+	letter-spacing: 1px;
+	font-size: 15px;
+}
+
+.panel-img{
+	margin-bottom: 30px;
+	max-width: 100%;
+}
+
+@media only screen and (min-width: 900px){
+	.panel-table {
+		justify-content: center;
+		flex-direction: row;
+		margin: auto;
+	} 
+}
+@media screen and (max-width: 1000px) {
    h1{
 		font-size: 50px;
 	  }
@@ -25,32 +71,13 @@
 		 font-size: 15px;
 	  }
 }
-          header {background-color: #ADD8E6;}
-          h1 { 
-		text-align: center;
-		color: #fff;
-	  }
-	  h2 {
-		text-align: center;
-	  }
-          
-	
-          .info { text-align: center }
-          
-          img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-          }
-          
-          body {
-            background-image: url('https://unsplash.com/photos/XFWiZTa2Ub0/download?force=true');
-          }
+</style>
 
+</head>
 
-    </style>
-   </head>
-	<div class="top"><h1>Dunder Mifflin Inc,<h1><h2>Paper Company</h2></div>
+<body>
+	<body>
+	<div class="top"><a href="index.html" style = "text-decoration:none; color:#fff"> <h1>Dunder Mifflin Inc,<h1></a><h2>Paper Company</h2></div>
 		
 		<div id="content">
 		
@@ -68,47 +95,47 @@
 				
 			</div>	
 		</div>		
-	
-   <body>
-       <h1> Why Dunder Mifflin </h1>     
-
-             
-       <div class="info">
-     
-           <h2 style = "margin-top: 0%;">  Customer Support  </h2>     
-
-           <h4> Dunder Mifflin is any business's first choice when it comes to paper needs and heres why. </h4>     
-           <h4> As a smaller company Dunder Mifflin is able to put far more effort into our customers. </h4>     
-           <h4> We know that your special, and we'll treat you that way. At Dunder Mifflin, the custumor is always right.   </h4> 
-           
-           <img src = https://i.insider.com/5e558ab0a9f40c23201d65a5?width=750&format=jpeg&auto=webp 
-            height="200"  />
-    
-           <h2 style = "margin-top: 0%;"> Incredible Team  </h2>     
-           
-           <h4> Dunder Mifflin's greatest asset is it's people. From our incredibly valuable team members   </h4>     
-           <h4> in the warehouse, to Janet in accounting, every single member of Dunder Mifflin is incredibly   </h4>     
-           <h4>  focused on helping you and your business meet all it's paper needs.  </h4>     
-
-           <img src = https://www.gannett-cdn.com/presto/2020/03/23/USAT/c8d29efc-8433-4969-b675-e550ce3922b0-Ryan_then.jpeg?width=2560 
-            height="200"  />
-
-            <h2 style = "margin-top: 0%;"> Quality Supplies  </h2>     
-            
-            <h4> Dunder Mifflin prides itself on the quality of the things that we sell. We personally   </h4>     
-            <h4> stand behind everything we sell, and offer a money-back guarantee if your business is not   </h4>     
-            <h4> 100% satisfied by our products. Although we mostly supply paper and paper products, we also  </h4> 
-            <h4> sell many other office supplies such as paper clips and pencils.  </h4>     
-    
-
-            <img src = https://www.marcoofficesupply.com/wp-content/uploads/2019/11/office-supplies-7.jpg 
-             height="150"  />
-
-           
-
-      </div class="info">
-
-   <div class = "bottom">
+		
+		<div class="panel-table">
+			<div class="panel">
+                <img src = https://i.insider.com/5e558ab0a9f40c23201d65a5?width=750&format=jpeg&auto=webp 
+                 width="250" height="250"  />
+				<ul class="panel-points">
+					<h3>Custumor Support:</h3>
+					<li>Dunder Mifflin is any business's first choice when it comes to paper needs and heres why.    
+                     As a smaller company Dunder Mifflin is able to put far more effort into our customers.      
+                    We know that your special, and we'll treat you that way. At Dunder Mifflin, the custumor is always right.</li>
+				</ul>
+				
+			</div>
+			<div class="panel">
+                <img src = https://www.gannett-cdn.com/presto/2020/03/23/USAT/c8d29efc-8433-4969-b675-e550ce3922b0-Ryan_then.jpeg? 
+                 width="250" height="250"  />
+				<h3 class="panel-header">Incredible Team:</h3>
+				<ul class="panel-points">
+					<li>Dunder Mifflin's greatest asset is it's people. From our incredibly valuable team members        
+                     in the warehouse, to Janet in accounting, every single member of Dunder Mifflin is incredibly       
+                      focused on helping you and your business meet all it's paper needs.</li>
+				</ul>
+			</div>
+				<div class="panel">
+                    <img src = https://www.marcoofficesupply.com/wp-content/uploads/2019/11/office-supplies-7.jpg 
+                     width="250" height="250"  />
+					<h3 class="panel-header">Quality Supplies:</h3>
+					<ul class="panel-points">
+						<li>Dunder Mifflin prides itself on the quality of the things that we sell. We personally       
+                         stand behind everything we sell, and offer a money-back guarantee if your business is not      
+                         100% satisfied by our products. Although we mostly supply paper and paper products, we also  
+                         sell many other office supplies such as paper clips and pencils.</li>
+					</ul>
+			</div>
+			
+			
+		</div>
+			
+			
+			
+	<div class = "bottom">
 		Scranton PA | New York NY | Akron Ohio | Albany NY | Nashua NY | Rochester NY | Utica NY | Syracuse NY |
 		<br /><br />Binghamton NY | Buffalo NY | Camden NJ | Pittsfield MA | Stamford CT | Yonkers NY | 
 
@@ -118,9 +145,7 @@
 		<br />
 	Since 1949
 	</div>
-   </body>
-   
-   
-   
-	
+			
+</body>
+</body>
 </html>
