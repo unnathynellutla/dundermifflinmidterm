@@ -92,20 +92,4 @@ h2 {
 	color: #c8d5e5;
 	font-family: Futura;
 }
-
-@media screen and (max-width: 1000px) {
-   h1{
-		font-size: 50px;
-	  }
-	 h2{
-		margin-top:0%;
-		font-size:20px;
-	  }
-
-	  .menubar {
-		 border-width: 6px;
-	  }
-	  .bottom {
-		 font-size: 15px;
-	  }
-}	
+	
